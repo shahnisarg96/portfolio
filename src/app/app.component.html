@@ -1,0 +1,481 @@
+<!-- Navigation Menu-->
+<nav class="hide-on-small-only">
+  <ul class="side-nav fixed section table-of-contents">
+    <li class="logo">
+      <a id="logo-container" title="Navigate to the beginning of the page" href="#intro" class="brand-logo teal-text">
+        <h1>
+          Nisarg Shah<span class="brown-text light">Full Stack Developer</span>
+        </h1>
+      </a>
+    </li>
+    <li class="bold">
+      <a title="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
+          class="mdi-social-person small"></i><span>About</span></a>
+    </li>
+    <li class="bold">
+      <a title="Navigate to the Experience section" href="#experience" class="waves-effect waves-dark cyan-text"><i
+          class="mdi-action-trending-up small"></i><span>Experience</span></a>
+    </li>
+    <li class="bold">
+      <a title="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark indigo-text"><i
+          class="mdi-av-web small"></i><span>Projects</span></a>
+    </li>
+    <li class="bold">
+      <a title="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark purple-text"><i
+          class="mdi-av-equalizer small"></i><span>Skills</span></a>
+    </li>
+    <li class="bold">
+      <a title="Navigate to the Certifications section" href="#certifications"
+        class="waves-effect waves-dark red-text"><i class="mdi-action-grade small"></i><span>Certifications</span></a>
+    </li>
+    <li class="bold">
+      <a title="Navigate to the Education section" href="#education" class="waves-effect waves-dark orange-text"><i
+          class="mdi-social-school small"></i><span>Education</span></a>
+    </li>
+    <li class="bold">
+      <a title="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark brown-text"><i
+          class="mdi-content-mail small"></i><span>Contact</span></a>
+    </li>
+    <li class="bold">
+      <a href="assets/pdf/nisarg_resume_2020.pdf" target="_blank"
+        class="waves-effect waves-dark grey-text text-darken-3" title="View">
+        <i class="mdi-action-description small"></i>
+        <span>Resume</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="hide-on-large only trigger z-depth-1" (clickOutside)="toggleSideBar(false)">
+  <a title="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out" class="button-collapse"><i
+      class="mdi-navigation-menu" (click)='toggleSideBar(true)'></i></a>
+  <div class="name-title">
+    <a id="name" title="Navigate to the beginning of the page" href="#main" class="teal-text">Nisarg Shah</a><span
+      class="brown-text light">Full Stack Developer</span>
+  </div>
+</nav>
+<nav class="hide-on-large only" *ngIf='displaySidebar'>
+  <ul id="slide-out" class="side-nav" [style.left]="0">
+    <li class="bold">
+      <a title="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
+          class="mdi-social-person small"></i><span>About</span></a>
+    </li>
+    <li class="bold">
+      <a title="Navigate to the Experience section" href="#experience" class="waves-effect waves-dark cyan-text"><i
+          class="mdi-action-trending-up small"></i><span>Experience</span></a>
+    </li>
+    <li class="bold">
+      <a title="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark indigo-text"><i
+          class="mdi-av-web small"></i><span>Projects</span></a>
+    </li>
+    <li class="bold">
+      <a title="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark purple-text"><i
+          class="mdi-av-equalizer small"></i><span>Skills</span></a>
+    </li>
+    <li class="bold">
+      <a title="Navigate to the Certifications section" href="#certifications"
+        class="waves-effect waves-dark red-text"><i class="mdi-action-grade small"></i><span>Certifications</span></a>
+    </li>
+    <li class="bold">
+      <a title="Navigate to the Education section" href="#education" class="waves-effect waves-dark orange-text"><i
+          class="mdi-social-school small"></i><span>Education</span></a>
+    </li>
+    <li class="bold">
+      <a title="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark brown-text"><i
+          class="mdi-content-mail small"></i><span>Contact</span></a>
+    </li>
+    <li class="bold">
+      <a href="assets/pdf/nisarg_resume_2020.pdf" target="_blank"
+        class="waves-effect waves-dark grey-text text-darken-3" title="View">
+        <i class="mdi-action-description small"></i>
+        <span>Resume</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<!-- Main Content-->
+<main>
+  <section id="intro" class="section scrollspy full-height">
+    <div class="overlay"></div>
+    <div class="container">
+      <h2>
+        I want to <span class="teal">Develop Things</span><br />that
+        <span class="underline">Make a Difference</span>.
+      </h2>
+    </div>
+  </section>
+  <section id="about" class="section scrollspy">
+    <h3 class="page-title white-text teal">About</h3>
+    <div class="container flow-text">
+      <blockquote>
+        <h2>
+          Software Development is not just my Profession, it's my Passion.
+        </h2>
+      </blockquote>
+      <p>
+        I am a mission-driven full stack developer with {{experience}}+ years of professional experience and a passion
+        for achieving excellence. I want to enhance my working capacities, professional skills, business efficiencies as
+        a senior software developer there by serving my organization/client in best possible way with sheer
+        determination and commitment.
+      </p>
+      <p>
+        As a web developer, I enjoy using my obsessive attention to detail, my unequivocal love
+        for making things. I believe in developing scalable, secure, object-oriented web applications, with a
+        focus on optimal database structures. Along with all this, I have proficient experience
+        in full life-cycle product design, development, and production. In addition, I have
+        expert knowledge in Database structures like MySQL and MongoDB and excellent knowledge
+        in Javascript.
+      </p>
+      <blockquote>
+        <h2>
+          <strong>Current Focus</strong>:&nbsp;
+          Angular2+(Latest Angular 9), Node.js
+        </h2>
+      </blockquote>
+    </div>
+  </section>
+  <section id="experience" class="section scrollspy">
+    <h3 class="page-title white-text teal">Experience</h3>
+    <div class="container">
+      <div class="card">
+        <div class="card-content">
+          <div class="row">
+            <div class="col s12 m2">
+              <a href="https://www.cygnet-infotech.com/" target="_blank">
+                <img alt="Cygnet logo" src="assets/img/experience/cygnet.png" class="responsive-img center-block" />
+              </a>
+            </div>
+            <div class="col s12 m10">
+              <p>
+                <span class="card-title">
+                  <a href="https://www.cygnet-infotech.com/" target="_blank" class="teal-text hoverline">
+                    Cygnet infotech Pvt Ltd.
+                  </a>
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="role brown-text">Full-Stack Software Developer</div>
+          <blockquote>
+            <em class="grey-text">
+              Overall developed LEMP stack, MEAN stack as well as got admin knowledge in cloud
+              services.
+            </em>
+          </blockquote>
+          <ul>
+            <li>Designed, Architected and took responsibility database designs in multiple projects.</li>
+            <li>Took responsibility in setting up multiple projects and optimization on cloud services.</li>
+            <li>Created architecture from scratch in multiple projects including WEB and API.</li>
+            <li>Developed large scale LEMP stack applications and mastered integration with
+              Redis, Supervisor, Horizon, Passport, Cashier and Telescope.</li>
+            <li>Day in and Day out regularly got involved in client communications and even worked as a solution
+              provider.</li>
+            <li>Managed GIT handling and deployment related tasks in various projects for both backend and frontend.
+            </li>
+            <li>Worked on cloud spaces like Digital Ocean, AWS and Azure.</li>
+            <li>Worked on various domains such as Health care, Survey, Bookings and E-commerce.</li>
+            <li>Immensely contributed in frontend framework Angular2+ in the multiple projects.</li>
+            <li>Handled responsibility to coordinate with team members (Mobile team and angular team) for API related
+              tasks.</li>
+            <li>Developed ACL (Access control list) in various projects.</li>
+            <li>Developed Dashboards with advanced JS.</li>
+            <li>Worked on stripe payment gateway for payment, Inter-messaging module for chat, SMTP, Push notifications.
+            </li>
+          </ul>
+        </div>
+        <div class="card-action">
+          <span class="brown-text"><strong>Jul 2018 - Present | Ahmedabad, Gujarat, India</strong></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <div class="row">
+            <div class="col s12 m2">
+              <a href="https://www.cygnet-infotech.com/" target="_blank">
+                <img alt="Cygnet logo" src="assets/img/experience/cygnet.png" class="responsive-img center-block" />
+              </a>
+            </div>
+            <div class="col s12 m10">
+              <p>
+                <span class="card-title">
+                  <a href="https://www.cygnet-infotech.com/" target="_blank" class="teal-text hoverline">
+                    Cygnet infotech Pvt Ltd.
+                  </a>
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="role brown-text">Trainee Software developer</div>
+          <blockquote>
+            <em class="grey-text">
+              Overall understood and implemented the concepts of full software development life
+              cycle.
+            </em>
+          </blockquote>
+          <ul>
+            <li>Developed a project KHARIDI – Shopping cart.</li>
+            <li>Implemented the project in full life-cycle with product analysis, product design, development, testing
+              and deployment.</li>
+            <li>Contributed to the team in all phases of the project.</li>
+            <li>Worked directly with the client to achieve better result.</li>
+            <li>Worked with the Automation testing tool named Testing Whiz.</li>
+            <li>Worked with LARAVEL 5.0 MVC framework for the development of web application KHARIDI.</li>
+            <li>Worked with Advanced Javascript concepts.</li>
+            <li>Trained and learnt fundamentals of modern programming languages and development life cycles.</li>
+          </ul>
+        </div>
+        <div class="card-action">
+          <span class="brown-text"><strong>Jan 2018 - May 2018 | Ahmedabad, Gujarat, India</strong></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <div class="row">
+            <div class="col s12 m2">
+              <a href="http://www.waytowebeducation.com/" target="_blank">
+                <img alt="Way2Web logo" src="assets/img/experience/way2web.png" class="responsive-img center-block" />
+              </a>
+            </div>
+            <div class="col s12 m10">
+              <p>
+                <span class="card-title">
+                  <a href="http://www.waytowebeducation.com/" target="_blank" class="teal-text hoverline">
+                    Way2Web Pvt. Ltd.
+                  </a>
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="role brown-text">
+            Intern
+          </div>
+          <blockquote>
+            <em class="grey-text">
+              Overall got acquainted with software development.
+            </em>
+          </blockquote>
+          <ul>
+            <li>Developed a project OMERAKI - Online Book Publication House.</li>
+            <li>Worked on basics of web development.</li>
+            <li>Worked on HTML5, CSS3, Scripting language JS.</li>
+            <li>Worked on CORE PHP and Implemented with jQuery, AJAX.</li>
+            <li>Worked on the Bootstrap Framework.</li>
+          </ul>
+        </div>
+        <div class="card-action">
+          <span class="brown-text"><strong>Jun 2017 - Dec 2017 | Ahmedabad, Gujarat, India</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects" class="section scrollspy">
+    <h3 class="page-title white-text teal">Projects</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6 l4" *ngFor='let project of projects; let i=index;'>
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="Screenshot of {{project.title}}" src="{{project.imgSrc}}" class="activator" />
+            </div>
+            <div class="card-content" (click)="toggleCard(project.title)">
+              <span class="card-title activator teal-text hoverline">{{project.title}}<i
+                  class="mdi-navigation-more-vert right"></i></span>
+              <p>
+                {{project.description}}
+              </p>
+            </div>
+            <div class="card-reveal"
+              [ngStyle]="{'transform':displayCard == project.title ? 'translateY(-100%)' : 'translateY(0%)' }">
+              <span class="card-title brown-text">Technology / Features
+                <i class="mdi-navigation-close right" (click)="toggleCard(false)"></i>
+              </span>
+              <ul *ngFor='let tech of project.technology'>
+                <li><strong>{{tech}}</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="skills" class="section scrollspy">
+    <h3 class="page-title white-text teal">Skills</h3>
+    <div class="container">
+      <div class="card" *ngFor='let skill of skills | keyvalue: disableSortingByKey'>
+        <div class="card-content">
+          <h4 class="brown-text light">{{skill.key}}</h4>
+          <div class="row text-center">
+            <div class="col s4 m2" *ngFor='let tech of skill.value'>
+              <img alt="" [src]="tech.imgSrc" class="responsive-img" />
+              <p><strong>{{tech.title}}</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="certifications" class="section scrollspy">
+    <h3 class="page-title white-text teal">Certifications / Co-curricular Activites</h3>
+    <div class="container">
+      <div class="card">
+        <div class="card-content">
+          <div class="row">
+            <div class="col s12 m10">
+              <ul>
+                <li>Certified for Javascript Algorithms and Data Structures from FreeCodeCamp in August 2018.</li>
+                <li>Won Web-designing contest and Hackathon competition at Cygnet InfoTech Pvt. Ltd.</li>
+                <li>Attended Seminars on Business Analysis, Client Communication, Team-Work, Self-Grooming.</li>
+                <li>Certified for Web development course from WaytoWeb Pvt. Ltd. in December 2017.</li>
+                <li>Volunteered in Makerfest 2018 at CEPT University.</li>
+                <li>Volunteered in Girlscript India summit 2017.</li>
+                <li>Winner in Code Mutants event at Synapse 2017 in DAIICT.</li>
+                <li>Participated in INVENT-O-FEST event in August 2014 at ACET.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 l4" *ngFor='let cert of certificates;'>
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="Screenshot of Interpol8r web app" src="{{cert.imgSrc}}" class="activator" />
+            </div>
+            <div class="card-content">
+              <p style="text-align: center;">
+                <strong>{{cert.title}}</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="education" class="section scrollspy">
+    <h3 class="page-title white-text teal">Education</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <p>
+                <span class="card-title">
+                  <a href="https://www.alpha-cet.in/" class="teal-text hoverline" target="_blank">
+                    Alpha College of Engineering & Technology(GTU)
+                  </a>
+                </span>
+              </p>
+              <p class="brown-text">Ahmedabad, Gujarat, India</p>
+              <ul>
+                <li>B.E. in Computer Science</li>
+                <li>8.28/10 CPI</li>
+              </ul>
+            </div>
+            <div class="card-action">
+              <span class="brown-text"><strong>2014 - 2018 | Ahmedabad, Gujarat, India</strong></span>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <p>
+                <span class="card-title">
+                  <a href="https://hbkapadia.com/" class="teal-text hoverline" target="_blank">
+                    H.B.Kapadia New High School(GSEB)
+                  </a>
+                </span>
+              </p>
+              <p class="brown-text">Ahmedabad, Gujarat, India</p>
+              <ul>
+                <li>HSC - 2014</li>
+                <li>SSC - 2012</li>
+              </ul>
+            </div>
+            <div class="card-action">
+              <span class="brown-text"><strong>2003 - 2014 | Ahmedabad, Gujarat, India</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="section scrollspy full-height">
+    <h3 class="page-title white-text teal">Contact</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <p>
+                <a target="_blank" title="Email Nisarg" href="mailto:shahnisarg96@gmail.com" data-position="top"
+                  data-tooltip="Email Nisarg" class="btn-floating btn-large waves-effect waves-light brown tooltipped">
+                  <i class="fa fa-envelope"></i>
+                </a>
+                <a target="_blank" title="Email Nisarg" href="mailto:shahnisarg96@gmail.com"
+                  class="hoverline brown-text">shahnisarg96@gmail.com</a>
+              </p>
+              <p>
+                <a target="_blank" title="Mobile number of Nisarg" href="tel:+91-8401998755" data-position="top"
+                  data-tooltip="Mobile number of Nisarg"
+                  class="btn-floating btn-large waves-effect waves-light brown tooltipped">
+                  <i class="fa fa-phone"></i>
+                </a>
+                <a target="_blank" title="Mobile number of Nisarg" href="tel:+91-8401998755"
+                  class="hoverline brown-text">+91-8401998755
+                </a>
+              </p>
+              <p>
+                <a target="_blank" title="Contact Nisarg on Skype" href="skype:live:.cid.f4877edde3ed90c8?call"
+                  data-position="top" data-tooltip="Contact Nisarg on Skype"
+                  class="btn-floating btn-large waves-effect waves-light brown tooltipped">
+                  <i class="fa fa-skype"></i>
+                </a>
+                <a target="_blank" title="Contact Nisarg on Skype" href="skype:live:.cid.f4877edde3ed90c8?call"
+                  class="hoverline brown-text">live:.cid.f4877edde3ed90c8
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <p>
+                <a target="_blank" title="View Nisarg on GitHub" href="https://github.com/shahnisarg96"
+                  data-position="top" data-tooltip="View Nisarg on GitHub"
+                  class="btn-floating btn-large waves-effect waves-light brown tooltipped">
+                  <i class="fa fa-github"></i>
+                </a>
+                <a target="_blank" title="View Nisarg on GitHub" href="https://github.com/shahnisarg96"
+                  class="hoverline brown-text">github.com/shahnisarg96
+                </a>
+              </p>
+              <p>
+                <a target="_blank" title="View Nisarg on LinkedIn" href="https://www.linkedin.com/in/shahnisarg96/"
+                  data-position="top" data-tooltip="View Nisarg on LinkedIn"
+                  class="btn-floating btn-large waves-effect waves-light brown tooltipped">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+                <a target="_blank" title="Nisarg on LinkedIn" href="https://www.linkedin.com/in/shahnisarg96/"
+                  class="hoverline brown-text">linkedin.com/in/shahnisarg96
+                </a>
+              </p>
+              <p>
+                <a target="_blank" title="View Nisarg on Stack Overflow"
+                  href="https://stackoverflow.com/users/13462229/nisarg-shah" data-position="top"
+                  data-tooltip="View Nisarg on Stack Overflow"
+                  class="btn-floating btn-large waves-effect waves-light brown tooltipped">
+                  <i class="fa fa-stack-overflow"></i>
+                </a>
+                <a target="_blank" title="Nisarg on Stack Overflow"
+                  href="https://stackoverflow.com/users/13462229/nisarg-shah"
+                  class="hoverline brown-text">stackoverflow.com/nisarg-shah
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

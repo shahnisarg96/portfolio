@@ -1,0 +1,6 @@
+/* Materialize - Compiled and minified CSS*/
+@import 'assets/css/materialize.min';
+/* Font Awesome Icon - CSS*/
+@import 'assets/css/font-awesome.min';
+/* Custom Styles*/
+@import 'assets/css/style';
