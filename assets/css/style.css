@@ -140,9 +140,11 @@ h3 {
   height: 100vh;
 }
 #intro.section {
-  background: url(../img/nisarg.jpg) no-repeat top
-    center/cover;
+  background: url(../img/nisarg.jpg);
   position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
 #intro.section .container {
   color: white;
