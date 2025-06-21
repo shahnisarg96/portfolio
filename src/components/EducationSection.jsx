@@ -22,21 +22,25 @@ const EducationSection = () => (
                             </div>
                             {/* Card content */}
                             <div className="flex-1 bg-gradient-to-r from-primary/10 via-base-200 to-secondary/10 rounded-xl p-6 shadow-md border border-base-300">
-                                <h4 className="text-lg font-bold mb-1">
+                                <h4 className="text-lg font-bold mb-1 text-primary">
+                                    {edu.degree}
+                                </h4>
+                                <div className="mb-1">
                                     <a
                                         href={edu.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-primary hover:underline"
+                                        className="font-semibold text-base-content hover:underline"
                                     >
                                         {edu.school}
                                     </a>
-                                </h4>
+                                </div>
                                 <div className="text-base-content/80 mb-1">{edu.location}</div>
-                                <ul className="list-disc ml-5 mb-1 text-base-content/90">
-                                    <li>{edu.degree}</li>
-                                    {edu.grade && <li>{edu.grade}</li>}
-                                </ul>
+                                {edu.grade && (
+                                    <div className="text-base-content/90 mb-1">
+                                        <span className="font-medium">Grade:</span> {edu.grade}
+                                    </div>
+                                )}
                                 <div className="mt-1 text-sm text-secondary font-semibold">{edu.period}</div>
                             </div>
                         </div>

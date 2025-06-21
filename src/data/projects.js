@@ -20,6 +20,31 @@ const projects = [
             'Supports authentication and rate limiting',
             'Easy integration with microservices'
         ]
+    }, 
+    {
+        title: 'NXLVL – NextGen Social Network',
+        description: 'A fully optimized, scalable social networking platform inspired by LinkedIn and Instagram, designed for professional and creative communities. Features include advanced user profiles, real-time messaging, content feeds, notifications, and media sharing.',
+        technology: [
+            'React',
+            'Node.js',
+            'MongoDB',
+            'Socket.io',
+            'Redis',
+            'AWS',
+            'Microservices',
+            'Tailwind CSS'
+        ],
+        details: [
+            'Rich user profiles with customizable sections, media uploads, and social links',
+            'Real-time chat, notifications, and activity feeds for seamless engagement',
+            'Advanced content discovery with hashtags, trending posts, and recommendations',
+            'Scalable backend with microservices and Redis caching',
+            'Role-based access, privacy controls, and secure authentication',
+            'Optimized for high concurrency and rapid content delivery'
+        ],
+        // Add your repo or demo links if public:
+        code: 'https://github.com/shahnisarg96/nxlvl', // Or main backend/frontend repo if split
+        demo: 'https://nxlvl.app'
     },
     {
         title: 'DevTinder - Social Learning Platform',
