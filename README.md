@@ -132,7 +132,7 @@ react-portfolio/
 ## 👨‍💻 Author
 
 **Nisarg Shah**  
-[Portfolio](https://nisargshah.dev) | 
+[Portfolio](https://shahnisarg96.github.io/portfolio/) | 
 [GitHub](https://github.com/shahnisarg96) | 
 [LinkedIn](https://linkedin.com/in/shahnisarg96)
 
