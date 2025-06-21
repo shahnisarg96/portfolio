@@ -17,7 +17,7 @@ const navItems = [
         id: 'resume',
         title: 'Resume',
         icon: <FaFilePdf className="text-base-content" />,
-        href: 'assets/pdf/nisarg_resume_2020.pdf',
+        href: './pdf/nisarg_2025.pdf',
         target: '_blank'
     }
 ];
