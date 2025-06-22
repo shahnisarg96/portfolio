@@ -17,7 +17,7 @@ const CertificatesSection = () => {
                 <h3 className="text-3xl font-bold text-primary mb-10 text-center">
                     Appreciations & Certifications
                 </h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 relative">
+                <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-6 relative">
                     {certificates.map((cert, idx) => (
                         <div
                             key={idx}

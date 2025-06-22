@@ -52,7 +52,7 @@ const ProjectsSection = () => {
                 <motion.h3
                     className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center"
                 >
-                    Projects
+                    PROJECTS
                 </motion.h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {projectsToShow.map((project, idx) => (

@@ -23,7 +23,7 @@ const SkillsSection = () => {
                 </h3>
 
                 {/* Top Skills Grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-6">
+                <div className="grid grid-cols-4 gap-6 mb-6">
                     {(!showAll ? topSkills : []).map((tech, i) => (
                         <div
                             key={i}
@@ -58,7 +58,7 @@ const SkillsSection = () => {
                         {categories.filter((cat) => cat != 'Top Skills').map((cat) => (
                             <div key={cat}>
                                 <h4 className="text-lg font-semibold text-secondary mb-4">{cat}</h4>
-                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                                <div className="grid grid-cols-4 gap-6">
                                     {skills[cat].map((tech, i) => (
                                         <div
                                             key={i}

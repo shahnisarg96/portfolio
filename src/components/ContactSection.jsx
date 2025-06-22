@@ -38,7 +38,7 @@ const ContactSection = () => (
                 Whether you want to discuss a project, share an idea, or just say hi—my inbox and DMs are always open!
             </motion.p>
             <motion.div
-                className="grid grid-cols-2 sm:grid-cols-3 gap-x-12 gap-y-8 justify-items-center"
+                className="grid grid-cols-3 sm:grid-cols-3 gap-x-12 gap-y-8 justify-items-center"
                 variants={container}
             >
                 {contactDetails.map((c, i) => (
