@@ -53,7 +53,7 @@ const ContactSection = () => (
                         whileHover={{ y: -6, scale: 1.12 }}
                         whileTap={{ scale: 0.97 }}
                     >
-                        <span className="flex items-center justify-center w-14 h-14 rounded-full bg-primary/20 text-primary text-2xl mb-2 transition group-hover:bg-primary group-hover:text-base-100 shadow">
+                        <span className="flex items-center justify-center w-14 h-14 rounded-full bg-primary/20 text-primary text-2xl mb-2 transition group-hover:bg-primary group-hover:text-secondary shadow">
                             {c.icon}
                         </span>
                         <span className="text-sm text-base-content/80 group-hover:text-primary text-center break-all transition-colors font-medium">

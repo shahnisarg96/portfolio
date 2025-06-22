@@ -1,280 +1,173 @@
 const projects = [
     {
         title: 'Scalable Microservices Architecture',
-        description: 'A comprehensive microservices architecture template featuring API Gateway, authentication service, and Kafka integration for logging',
-        technology: ['Java', 'Spring Boot', 'Kafka', 'API Gateway', 'Microservices'],
+        description: 'Enterprise-grade microservices template featuring API Gateway, authentication, and Kafka integration for modular, cloud-ready deployments.',
+        technology: ['API Gateway', 'Node.js', 'Express', 'Java', 'Spring Boot', 'Kafka', 'PostgreSQL', 'Docker', 'Kubernetes'],
         code: 'https://github.com/shahnisarg96/scalable-architecture-template',
         details: [
-            'Modular microservices design for scalability',
-            'Centralized API Gateway for routing and security',
-            'Kafka integration for asynchronous logging'
+            'Designed modular services for independent scaling and deployment using Docker and Kubernetes.',
+            'Centralized API Gateway for secure routing and JWT authentication.',
+            'Integrated Kafka for asynchronous event streaming and distributed logging.'
+        ]
+    },
+    {
+        title: 'NXLVL – NextGen Social Network',
+        description: 'Scalable social platform for athletes and creators, inspired by LinkedIn and Instagram, with integrated NFT marketplace and real-time engagement.',
+        technology: [
+            'React', 'Node.js', 'PostgreSQL', 'XMPP', 'Redis', 'Prisma', 'Apollo GraphQL', 'Docker', 'Kubernetes'
+        ],
+        demo: 'https://nxlvl.app',
+        details: [
+            'Built microservices with Node.js, Docker, and Kubernetes for scalable, cloud-native deployments.',
+            'Developed an integrated NFT marketplace for secure minting, buying, and selling of digital assets.',
+            'Implemented real-time chat, notifications, and data access using XMPP, Redis, Apollo GraphQL, PostgreSQL, and Prisma ORM.'
         ]
     },
     {
         title: 'Node.js API Gateway Framework',
-        description: 'Customizable API Gateway template for routing, authentication, and request management',
+        description: 'Customizable API Gateway for Node.js microservices with advanced routing, authentication, and request management.',
         technology: ['Node.js', 'Express', 'API Gateway', 'JWT'],
         code: 'https://github.com/shahnisarg96/api-gateway-template',
         details: [
-            'Lightweight and extensible gateway architecture',
-            'Supports authentication and rate limiting',
-            'Easy integration with microservices'
+            'Implemented lightweight, extensible gateway with rate limiting and JWT authentication.',
+            'Enabled seamless integration with distributed microservices for scalable architectures.',
+            'Enhanced security and request validation for enterprise systems.'
         ]
-    }, 
-    {
-        title: 'NXLVL – NextGen Social Network',
-        description: 'A fully optimized, scalable social networking platform inspired by LinkedIn and Instagram, designed for professional and creative communities. Features include advanced user profiles, real-time messaging, content feeds, notifications, and media sharing.',
-        technology: [
-            'React',
-            'Node.js',
-            'MongoDB',
-            'Socket.io',
-            'Redis',
-            'AWS',
-            'Microservices',
-            'Tailwind CSS'
-        ],
-        details: [
-            'Rich user profiles with customizable sections, media uploads, and social links',
-            'Real-time chat, notifications, and activity feeds for seamless engagement',
-            'Advanced content discovery with hashtags, trending posts, and recommendations',
-            'Scalable backend with microservices and Redis caching',
-            'Role-based access, privacy controls, and secure authentication',
-            'Optimized for high concurrency and rapid content delivery'
-        ],
-        // Add your repo or demo links if public:
-        code: 'https://github.com/shahnisarg96/nxlvl', // Or main backend/frontend repo if split
-        demo: 'https://nxlvl.app'
     },
     {
-        title: 'DevTinder - Social Learning Platform',
-        description: 'Tinder-inspired platform for developer networking and collaboration',
+        title: 'AgileMind – AI-Assisted Planning',
+        description: 'AI-powered agile planning platform with automated user story generation, capacity dashboards, and team utilization analytics.',
+        technology: ['Node.js', 'Angular', 'Azure DevOps', 'OpenAI API', 'Prisma', 'MySQL'],
+        details: [
+            'Developed AI-driven user story creation using OpenAI APIs, reducing planning time by 50%.',
+            'Implemented capacity planning dashboards with utilization metrics for data-driven sprint planning.',
+            'Integrated with Azure DevOps for seamless workflow synchronization and automated reporting.'
+        ]
+    },
+    {
+        title: 'KPI – System Monitoring',
+        description: 'Real-time dashboard and analytics platform for monitoring critical system metrics and automated enterprise alerting.',
+        technology: ['Node.js', 'Spring Boot', 'Angular', 'Kafka', 'ADX', 'Power BI'],
+        details: [
+            'Developed interactive dashboards with Angular and Power BI for live KPI visualization and analytics.',
+            'Integrated with Ki-Holo messaging for automated, real-time alerting on system health and performance.',
+            'Leveraged Node.js, Spring Boot, and Kafka for scalable data ingestion and event-driven processing.'
+        ]
+    },
+    {
+        title: 'Ki-Holo – Enterprise Messaging & Alerting',
+        description: 'Scalable platform for real-time system notifications, alert delivery, and incident response across distributed enterprise environments.',
+        technology: ['Node.js', 'Spring Boot', 'Angular', 'Kafka', 'React Native', 'Microservices', 'WebSockets'],
+        details: [
+            'Engineered high-throughput messaging and alert delivery using Kafka and WebSockets for instant communication.',
+            'Developed cross-platform mobile notifications with React Native for on-the-go incident management.',
+            'Integrated with KPI Monitoring to provide seamless, automated alerting and enterprise-scale reliability.'
+        ]
+    },
+    {
+        title: 'FeatureHub – Enterprise Feature Management',
+        description: 'Dynamic UI control platform for a 50M-user superapp, enabling real-time customization, user segmentation, and experimentation.',
+        technology: ['Angular', 'Node.js', 'MySQL', 'Spring Boot', 'Microservices', 'Feature Flags'],
+        details: [
+            'Managed dynamic feature toggling and real-time configuration updates for a 3-in-1 superapp serving 50 million users.',
+            'Implemented user segmentation and targeted feature rollout to personalize experiences across web and mobile platforms.',
+            'Integrated with microservices architecture for seamless scaling and agile experimentation.'
+        ]
+    },
+    {
+        title: 'Zevo Health – Employee Wellbeing Platform',
+        description: 'Comprehensive health, fitness, and wellbeing platform built for an Ireland-based company, delivering digital solutions for employee wellness and engagement.',
+        technology: ['Laravel', 'Angular', 'MySQL'],
+        details: [
+            'Developed and maintained two integrated products for physical and mental wellbeing, including activity tracking, nutrition, and mindfulness resources.',
+            'Implemented personalized dashboards, wellness challenges, leaderboards, and secure user authentication to boost engagement and healthy habits.',
+            'Collaborated with cross-functional teams to deliver scalable, GDPR-compliant solutions for enterprise clients in the health and corporate wellness sector.'
+        ],
+        demo: 'https://www.zevohealth.com/'
+    },
+    {
+        title: 'SecureInsure – Blockchain Insurance Platform',
+        description: 'Enterprise blockchain solution for immutable policy management and secure data workflows in insurance ecosystems.',
+        technology: ['Ethereum', 'Solidity', 'Smart Contracts', 'Node.js', 'Angular', 'Spring Boot'],
+        details: [
+            'Developed smart contract-based policy management and authentication for tamper-proof insurance records.',
+            'Ensured immutable data integrity and compliance across 500K+ policies through blockchain validation.',
+            'Implemented secure access controls and integrated blockchain with legacy insurance systems for compliance and streamlined verification.'
+        ]
+    },
+    {
+        title: 'React Portfolio – Developer Showcase',
+        description: 'A modern, interactive portfolio single-page application to showcase professional experience, projects, and skills in a visually engaging way.',
+        technology: ['React', 'Vite', 'Tailwind CSS', 'DaisyUI', 'Framer Motion'],
+        code: 'https://github.com/shahnisarg96/react-portfolio',
+        details: [
+            'Built a fully responsive and accessible SPA with animated sections, dark/light theme, and smooth navigation.',
+            'Developed modular components for experience, projects, skills, certifications, and education timelines.',
+            'Implemented performance optimizations, mobile-first design, and easy customization for rapid deployment.'
+        ]
+    },
+    {
+        title: 'DevTinder – Social Platform',
+        description: 'Tinder-inspired networking platform for developers to connect, collaborate, and learn together (learning project).',
         technology: ['Node.js', 'React', 'MongoDB', 'Socket.io'],
         code: 'https://github.com/shahnisarg96/devTinder-node',
-        demo: 'https://github.com/shahnisarg96/devTinder-react',
         details: [
-            'Real-time matching and chat functionality',
-            'User profile management with skill tags',
-            'Responsive design for all devices'
+            'Developed core features for real-time matching and chat as a learning project.',
+            'Implemented skill-tagged user profiles and basic search functionality.',
+            'Created responsive UI for web and mobile, focusing on React and Socket.io integration.'
         ]
     },
     {
-        title: 'NetflixGPT - AI-Powered Streaming',
-        description: 'Streaming platform with AI-powered content discovery and recommendations',
-        technology: ['React', 'Next.js', 'OpenAI API', 'Tailwind CSS'],
+        title: 'NetflixGPT – AI Movie Finder',
+        description: 'Web application for exploring and searching movies with AI-powered recommendations, inspired by Netflix UI (learning project).',
+        technology: ['React', 'Node.js', 'OpenAI API', 'Tailwind CSS'],
         code: 'https://github.com/shahnisarg96/NetflixGPT',
         details: [
-            'Intelligent movie search using AI',
-            'Personalized recommendation engine',
-            'Server-side rendering for performance'
+            'Built as a learning project to explore React and OpenAI API integration for movie search and recommendations.',
+            'Implemented movie listing and basic AI-powered content suggestions.',
+            'Focused on UI/UX design and performance optimization using Tailwind CSS.'
         ]
     },
     {
-        title: 'FoodFusion - Restaurant Discovery',
-        description: 'Food delivery platform with restaurant listings and order management',
-        technology: ['React', 'Node.js', 'MongoDB', 'Redux'],
-        code: 'https://github.com/shahnisarg96/namaste-food',
-        details: [
-            'Dynamic restaurant and menu listings',
-            'Real-time order tracking',
-            'User authentication and reviews'
-        ]
-    },
-    {
-        title: 'StreamVerse - Video Platform',
-        description: 'Video streaming platform with content discovery and playback',
-        technology: ['React', 'Node.js', 'MongoDB', 'YouTube API'],
-        code: 'https://github.com/shahnisarg96/namaste-youtube',
-        details: [
-            'Video streaming and playback engine',
-            'Content search and filtering',
-            'User subscriptions and playlists'
-        ]
-    },
-    {
-        title: 'BookSwap - Literary Exchange',
-        description: 'Platform for book enthusiasts to exchange and discover new titles',
+        title: 'BookSwap – Literary Exchange',
+        description: 'Community platform for book enthusiasts to exchange and discover new titles (learning project).',
         technology: ['React', 'Node.js', 'MongoDB'],
         code: 'https://github.com/shahnisarg96/book-exchange-backend',
-        demo: 'https://github.com/shahnisarg96/book-exchange-frontend',
         details: [
-            'Book listing and search functionality',
-            'Exchange request management',
-            'User messaging system'
+            'Developed core features for book listing, search, and exchange requests as a learning exercise.',
+            'Implemented basic messaging and user authentication.',
+            'Focused on MERN stack fundamentals and responsive design.'
         ]
     },
     {
-        title: 'ExpenseWise - Finance Tracker',
-        description: 'Mobile application for tracking personal expenses and budgets',
+        title: 'ExpenseWise – Finance Tracker',
+        description: 'Cross-platform mobile app for tracking personal expenses and budgets, built with Flutter.',
         technology: ['Flutter', 'Dart', 'Firebase'],
         code: 'https://github.com/shahnisarg96/flutter-expense-tracker',
         details: [
-            'Expense categorization and visualization',
-            'Budget planning and alerts',
-            'Cross-platform support'
+            'Developed with Flutter for native iOS and Android support.',
+            'Implemented real-time data sync and secure authentication with Firebase.',
+            'Features expense categorization, budget planning, and visual analytics.'
         ]
     },
     {
-        title: 'Solidity Patterns - Smart Contract Library',
-        description: 'Collection of reusable smart contract templates and patterns',
-        technology: ['Solidity', 'Ethereum', 'Smart Contracts'],
-        code: 'https://github.com/shahnisarg96/solidity-snippets',
+        title: 'FoodFusion – Restaurant Discovery',
+        description: 'End-to-end food delivery platform built with MEAN stack for a Ukrainian client, featuring restaurant listings, order management, and real-time tracking.',
+        technology: ['MongoDB', 'Express.js', 'Angular', 'Node.js'],
         details: [
-            'Reusable contract templates',
-            'Common Solidity patterns',
-            'Testing and deployment scripts'
+            'Developed dynamic restaurant and menu listings with user reviews using Angular and MongoDB.',
+            'Implemented real-time order tracking and notifications for seamless delivery experience.',
+            'Ensured secure user authentication and integrated payment processing.'
         ]
     },
     {
-        title: 'AgileMind - AI-Assisted Planning',
-        description: 'AI-powered agile planning tool for automated story creation',
-        technology: ['Azure DevOps', 'JIRA', 'OpenAI API', 'Node.js'],
-        details: [
-            'Automated user story generation',
-            'Requirements analysis and summarization',
-            'Agile workflow integration'
-        ]
-    },
-    {
-        title: 'AlertHub - Enterprise Messaging',
-        description: 'Scalable alerting platform for system-wide notifications',
-        technology: ['Node.js', 'Kafka', 'Redis', 'Microservices'],
-        details: [
-            'High-throughput messaging architecture',
-            'Real-time alert delivery system',
-            'Enterprise-grade reliability'
-        ]
-    },
-    {
-        title: 'KPI Dashboard - System Monitoring',
-        description: 'Real-time monitoring solution for critical system metrics',
-        technology: ['React', 'Node.js', 'Kafka', 'API Gateway'],
-        details: [
-            'Real-time KPI visualization',
-            'Automated alerting system',
-            'Customizable monitoring widgets'
-        ]
-    },
-    {
-        title: 'FeatureHub - Dynamic UI Control',
-        description: 'Feature management portal for dynamic application customization',
-        technology: ['React', 'Node.js', 'Feature Flags', 'Microservices'],
-        details: [
-            'Dynamic feature toggling',
-            'User segmentation and targeting',
-            'Real-time configuration updates'
-        ]
-    },
-    {
-        title: 'SecureInsure - Blockchain Data Vault',
-        description: 'Insurance data management system with blockchain security',
-        technology: ['Blockchain', 'Ethereum', 'Smart Contracts', 'React'],
-        details: [
-            'Immutable policy records',
-            'Smart contract-based management',
-            'Secure data authentication'
-        ]
-    },
-    // Original projects below
-    {
-        title: 'Infinity Web Services',
-        description: 'A sales website for Infinity web services and solutions',
-        technology: ['Angular 9', 'Node.js', 'MongoDB', 'SMTP'],
-        code: 'https://github.com/shahnisarg96/infinity-web-services',
-        details: [
-            'Role-based access control for admin and sales teams',
-            'Integrated payment gateway and email notifications',
-            'Deployed on AWS with CI/CD pipeline'
-        ]
-    },
-    {
-        title: 'Record Keeper',
-        description: 'Digital ledger application similar to khata book',
-        technology: ['Angular 9', 'Node.js', 'MongoDB', 'Angular Material'],
-        code: 'https://github.com/shahnisarg96/record-keeper',
-        details: [
-            'Financial tracking for small businesses',
-            'Inventory management system',
-            'Sales analytics dashboard'
-        ]
-    },
-    {
-        title: 'Personal Blog',
-        description: 'Content management system for personal blogging',
-        technology: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-        code: 'https://github.com/shahnisarg96/personal-blog',
-        demo: 'https://nisargshah.dev',
-        details: [
-            'Markdown content support',
-            'SEO optimized pages',
-            'Responsive design for all devices'
-        ]
-    },
-    {
-        title: 'Zevo Health Admin',
-        description: 'Admin panel for health and fitness application',
-        technology: ['Laravel', 'PHP', 'Redis', 'FCM'],
-        code: 'https://github.com/shahnisarg96/zevo-health-admin',
-        details: [
-            'User management system',
-            'Real-time notifications',
-            'Data analytics dashboard'
-        ]
-    },
-    {
-        title: 'Zevo Connect',
-        description: 'Employee wellbeing tracking platform',
-        technology: ['Laravel', 'PHP', 'JavaScript', 'Chart.js'],
-        code: 'https://github.com/shahnisarg96/zevo-connect',
-        details: [
-            'Health metric tracking',
-            'Team performance analytics',
-            'Customizable reports'
-        ]
-    },
-    {
-        title: 'Kharidi',
-        description: 'E-commerce platform with full shopping flow',
+        title: 'Kharidi – E-commerce Platform',
+        description: 'Full-featured e-commerce platform with product catalog, shopping cart, and secure payments.',
         technology: ['Laravel', 'PHP', 'Stripe', 'MySQL'],
-        code: 'https://github.com/shahnisarg96/kharidi',
         details: [
-            'Product catalog with filters',
-            'Shopping cart functionality',
-            'Secure payment processing'
-        ]
-    },
-    {
-        title: 'Admin Panel Framework',
-        description: 'Reusable admin panel for multiple applications',
-        technology: ['Laravel', 'Vue.js', 'REST API', 'JWT'],
-        code: 'https://github.com/shahnisarg96/admin-panel-framework',
-        details: [
-            'Role-based access control',
-            'Modular architecture',
-            'API documentation with Swagger'
-        ]
-    },
-    {
-        title: 'Portfolio 2025',
-        description: 'Modern developer portfolio with 3D animations',
-        technology: ['React', 'Three.js', 'Tailwind CSS', 'Framer Motion'],
-        code: 'https://github.com/shahnisarg96/portfolio-2025',
-        demo: 'https://nisargshah.dev',
-        details: [
-            'Interactive 3D background',
-            'Theme switching (light/dark)',
-            'Performance optimized with lazy loading'
-        ]
-    },
-    {
-        title: 'AI Chatbot',
-        description: 'LLM-powered chatbot with document retrieval',
-        technology: ['Python', 'LangChain', 'Next.js', 'Pinecone'],
-        code: 'https://github.com/shahnisarg96/ai-chatbot',
-        details: [
-            'Context-aware responses',
-            'Document Q&A functionality',
-            'Conversation history'
+            'Developed product catalog with advanced filters and search.',
+            'Implemented shopping cart, order management, and Stripe payment integration.',
+            'Ensured secure user authentication and responsive UI.'
         ]
     }
 ];

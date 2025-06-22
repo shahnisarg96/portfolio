@@ -32,7 +32,7 @@ const SkillsSection = () => {
                             <span className="text-4xl mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:text-primary">
                                 {tech.icon}
                             </span>
-                            <span className="text-xs font-medium text-base-content text-center transition-colors duration-300 group-hover:text-primary">
+                            <span className="text-xs font-medium text-base-content text-center transition-colors duration-300 group-hover:text-secondary">
                                 {tech.title}
                             </span>
                             {showAll && (

@@ -30,7 +30,7 @@ const EducationSection = () => (
                                         href={edu.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="font-semibold text-base-content hover:underline"
+                                        className="font-semibold text-base-content hover:underline hover:text-secondary"
                                     >
                                         {edu.school}
                                     </a>
