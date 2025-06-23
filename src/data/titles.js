@@ -1,10 +1,12 @@
 const titles = [
-    'Full-Stack Software Developer',
+    'Software Engineer',
+    'Full-Stack Developer',
+    'MEAN Stack Developer',
+    'MERN Stack Developer',
     'Cloud Native Engineer',
-    'Tech Lead & Team Collaborator',
+    'Tech Lead',
     'Aspiring Solution Architect',
-    'MEAN/MERN Stack Developer',
-    'AI Integration Enthusiast'
+    'AI Explorer'
 ];
 
 export default titles;
