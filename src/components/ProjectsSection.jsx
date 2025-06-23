@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useLayoutEffect } from 'react';
 import { FaExternalLinkAlt, FaCode, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-import projects from '../data/projects'; // Adjust the import path as necessary
+import projects from '../data/projects';
 
-const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
+const container = {
+    hidden: {},
     show: {
-        opacity: 1,
-        y: 0,
         transition: {
-            duration: 0.5,
-            ease: "easeOut"
+            staggerChildren: 0.15
         }
     }
+};
+
+const item = {
+    hidden: { opacity: 0, y: 40 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
 const detailsVariants = {
@@ -20,57 +22,90 @@ const detailsVariants = {
         opacity: 0,
         height: 0,
         marginTop: 0,
-        transition: {
-            duration: 0.2
-        }
+        transition: { duration: 0.2 }
     },
     open: {
         opacity: 1,
         height: "auto",
         marginTop: 0,
-        transition: {
-            duration: 0.4
-        }
+        transition: { duration: 0.4 }
     }
 };
 
 const ProjectsSection = () => {
-    const [expandedIndex, setExpandedIndex] = useState(null);
+    const [expandedId, setExpandedId] = useState(null);
     const [showAll, setShowAll] = useState(false);
+    const [animationKey, setAnimationKey] = useState(0);
+    const scrollPositionRef = useRef(0);
+    const sectionRef = useRef(null);
 
-    // Toggle expand/collapse for project details
-    const toggleExpand = (index) => {
-        setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
+    const toggleExpand = (title) => {
+        setExpandedId(prevId => (prevId === title ? null : title));
     };
 
-    // Show only top 4 projects unless "Show All" is clicked
     const projectsToShow = showAll ? projects : projects.slice(0, 4);
 
+    const handleShowAll = () => {
+        if (!showAll) {
+            // Save current scroll position before expanding
+            scrollPositionRef.current = window.scrollY;
+        } else {
+            // On "Show Less", scroll to the top of the Projects section
+            setTimeout(() => {
+                if (sectionRef.current) {
+                    sectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100); // Delay to allow layout to update
+        }
+        setShowAll(v => !v);
+        setExpandedId(null);
+        setAnimationKey(prev => prev + 1); // Force re-animation
+    };
+
+    // Restore scroll position after the project list changes (for "Show All")
+    useLayoutEffect(() => {
+        if (scrollPositionRef.current !== 0 && showAll) {
+            window.scrollTo(0, scrollPositionRef.current);
+            scrollPositionRef.current = 0;
+        }
+    }, [projectsToShow, showAll]);
+
     return (
-        <section id="projects" className="py-16 mt-6 scroll-mt-20 bg-gradient-to-b from-base-100 to-base-200">
+        <section
+            id="projects"
+            ref={sectionRef}
+            className="py-16 mt-6 scroll-mt-20 bg-gradient-to-b from-base-100 to-base-200"
+        >
             <div className="max-w-5xl mx-auto px-4">
                 <motion.h3
-                    className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center"
+                    className="text-4xl font-bold text-primary mb-12 text-center"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
                 >
                     PROJECTS
                 </motion.h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    {projectsToShow.map((project, idx) => (
+
+                <motion.div
+                    key={animationKey}
+                    variants={container}
+                    initial="hidden"
+                    animate="show"
+                    className="grid grid-cols-1 md:grid-cols-2 gap-10"
+                >
+                    {projectsToShow.map((project) => (
                         <motion.div
-                            key={idx}
-                            className="group border border-base-300 rounded-xl shadow-lg bg-gradient-to-br from-primary/10 via-base-200 to-secondary/10 hover:shadow-2xl transition-all duration-300 relative"
-                            variants={cardVariants}
-                            initial="hidden"
-                            whileInView="show"
-                            viewport={{ once: true, amount: 0.2 }}
+                            key={project.title}
+                            variants={item}
+                            className="group border border-base-300 rounded-xl shadow-lg bg-gradient-to-br from-primary/10 via-base-200 to-secondary/10 hover:shadow-2xl transition-all duration-300"
                         >
                             <div
                                 className="p-6 cursor-pointer"
-                                onClick={() => toggleExpand(idx)}
+                                onClick={() => toggleExpand(project.title)}
                                 tabIndex={0}
-                                aria-expanded={expandedIndex === idx}
+                                aria-expanded={expandedId === project.title}
                                 onKeyDown={e => {
-                                    if (e.key === "Enter" || e.key === " ") toggleExpand(idx);
+                                    if (e.key === "Enter" || e.key === " ") toggleExpand(project.title);
                                 }}
                             >
                                 <div className="flex justify-between items-center">
@@ -78,7 +113,7 @@ const ProjectsSection = () => {
                                         {project.title}
                                     </h4>
                                     <span className="text-primary text-xl">
-                                        {expandedIndex === idx ? <FaChevronUp /> : <FaChevronDown />}
+                                        {expandedId === project.title ? <FaChevronUp /> : <FaChevronDown />}
                                     </span>
                                 </div>
                                 <p className="mt-3 text-base-content/80 leading-relaxed">
@@ -86,19 +121,20 @@ const ProjectsSection = () => {
                                 </p>
                                 <div className="mt-4 flex flex-wrap gap-2">
                                     {project.technology.map((tech, i) => (
-                                        <span
+                                        <motion.span
                                             key={i}
                                             className="badge badge-outline badge-secondary text-sm"
+                                            whileHover={{ scale: 1.05 }}
+                                            whileTap={{ scale: 0.95 }}
                                         >
                                             {tech}
-                                        </span>
+                                        </motion.span>
                                     ))}
                                 </div>
                             </div>
 
-                            {/* Animated expand/collapse for details */}
                             <AnimatePresence initial={false}>
-                                {expandedIndex === idx && project.details && (
+                                {expandedId === project.title && project.details && (
                                     <motion.div
                                         className="border-t border-base-300 px-6 pb-6 bg-base-100 overflow-hidden"
                                         key="details"
@@ -110,29 +146,40 @@ const ProjectsSection = () => {
                                         <h5 className="text-lg font-semibold text-secondary mt-6 mb-3">Details</h5>
                                         <ul className="list-disc list-inside space-y-1 text-base-content/90">
                                             {project.details.map((detail, i) => (
-                                                <li key={i}>{detail}</li>
+                                                <motion.li
+                                                    key={i}
+                                                    initial={{ opacity: 0, x: -10 }}
+                                                    animate={{ opacity: 1, x: 0 }}
+                                                    transition={{ delay: i * 0.1 }}
+                                                >
+                                                    {detail}
+                                                </motion.li>
                                             ))}
                                         </ul>
                                         <div className="mt-4 flex gap-4">
                                             {project.demo && (
-                                                <a
+                                                <motion.a
                                                     href={project.demo}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="btn btn-sm btn-primary flex items-center gap-2"
+                                                    whileHover={{ scale: 1.05 }}
+                                                    whileTap={{ scale: 0.95 }}
                                                 >
                                                     Live Demo <FaExternalLinkAlt />
-                                                </a>
+                                                </motion.a>
                                             )}
                                             {project.code && (
-                                                <a
+                                                <motion.a
                                                     href={project.code}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="btn btn-sm btn-secondary flex items-center gap-2"
+                                                    whileHover={{ scale: 1.05 }}
+                                                    whileTap={{ scale: 0.95 }}
                                                 >
                                                     Source Code <FaCode />
-                                                </a>
+                                                </motion.a>
                                             )}
                                         </div>
                                     </motion.div>
@@ -140,17 +187,21 @@ const ProjectsSection = () => {
                             </AnimatePresence>
                         </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
-                {/* Show More / Show Less Button */}
-                <div className="flex justify-center mt-10">
+                <motion.div
+                    className="flex justify-center mt-10"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                >
                     <button
                         className="btn btn-outline btn-primary px-6"
-                        onClick={() => setShowAll((v) => !v)}
+                        onClick={handleShowAll}
                     >
                         {showAll ? "Show Less" : "Show All Projects"}
                     </button>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

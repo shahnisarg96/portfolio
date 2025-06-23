@@ -26,10 +26,12 @@ const AboutSection = () => (
                 className="space-y-8"
             >
                 <motion.h3
-                    className="text-4xl font-bold text-primary mb-6 text-center"
-                    variants={item}
+                    className="text-4xl font-bold text-primary mb-12 text-center"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
                 >
-                    About Me
+                    ABOUT ME
                 </motion.h3>
 
                 <motion.blockquote
