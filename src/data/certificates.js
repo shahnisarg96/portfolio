@@ -1,27 +1,27 @@
 const certificates = [
     {
         title: 'BFL Appreciation',
-        imgSrc: './img/certificates/bfl_appreciation.png',
+        imgSrc: './img/certificates/bfl_appreciation.jpg',
     },
     {
         title: 'AZ-204 Microsoft Certified',
-        imgSrc: './img/certificates/AZ_204.jpg',
+        imgSrc: './img/certificates/AZ_204.png',
     },
     {
         title: 'Namaste NodeJS',
-        imgSrc: './img/certificates/namaste_node.webp',
+        imgSrc: './img/certificates/namaste_node.png',
     },
     {
         title: 'Namaste React',
-        imgSrc: './img/certificates/namaste_react.webp',
+        imgSrc: './img/certificates/namaste_react.png',
     },
     {
         title: 'Namaste Javascript',
-        imgSrc: './img/certificates/namaste_js.webp',
+        imgSrc: './img/certificates/namaste_js.png',
     },
     {
         title: 'Cygnet Appreciation',
-        imgSrc: './img/certificates/cygnet_appreciation.jpg',
+        imgSrc: './img/certificates/cygnet_appreciation.png',
     },
     {
         title: 'Javascript Algorithms and DS',
