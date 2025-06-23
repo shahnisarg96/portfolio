@@ -1,6 +1,6 @@
 const titles = [
     'Software Engineer',
-    'Full-Stack Developer',
+    'Full Stack Developer',
     'MEAN Stack Developer',
     'MERN Stack Developer',
     'Cloud Native Engineer',
