@@ -48,7 +48,7 @@ A modern, interactive developer portfolio built with React, Vite, Tailwind CSS, 
 ## 📁 Project Structure
 
 ```
-react-portfolio/
+portfolio/
 ├── public/
 │   ├── img/                # Profile, certificates, experience logos
 │   │   ├── certificates/
@@ -76,8 +76,8 @@ react-portfolio/
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/shahnisarg96/react-portfolio.git
-   cd react-portfolio
+   git clone https://github.com/shahnisarg96/portfolio.git
+   cd portfolio
    ```
 
 2. **Install dependencies:**
@@ -127,14 +127,13 @@ react-portfolio/
 - [Tailwind CSS Documentation](https://tailwindcss.com/)
 - [DaisyUI Documentation](https://daisyui.com/)
 - [Framer Motion Docs](https://www.framer.com/motion/)
-- [Namaste React (YouTube Series)](https://www.youtube.com/playlist?list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP)
 
 ---
 
 ## 👨‍💻 Author
 
 **Nisarg Shah**  
-[Portfolio](https://shahnisarg96.github.io/react-portfolio/) | 
+[Portfolio](https://shahnisarg96.github.io/portfolio/) | 
 [GitHub](https://github.com/shahnisarg96) | 
 [LinkedIn](https://linkedin.com/in/shahnisarg96)
 
