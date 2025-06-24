@@ -24,6 +24,10 @@ const certificates = [
         imgSrc: './img/certificates/cygnet_appreciation.png',
     },
     {
+        title: 'HackerRank',
+        imgSrc: './img/certificates/hackerrank.png',
+    },
+    {
         title: 'Javascript Algorithms and DS',
         imgSrc: './img/certificates/javascript.png',
     },
