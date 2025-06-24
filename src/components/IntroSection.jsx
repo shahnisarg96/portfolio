@@ -64,7 +64,7 @@ const IntroSection = () => (
                     <motion.h2
                         className="text-2xl xs:text-2xl sm:text-2xl md:text-4xl lg:text-4xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
                         variants={item}
-                    >I'm a&nbsp;
+                    >I'm&nbsp;
                         <Typewriter
                             words={titles}
                             loop={0}
