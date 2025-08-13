@@ -35,9 +35,9 @@ const experiences = [
         ]
     },
     {
-        company: 'Cygnet Infotech Pvt Ltd.',
-        logo: './img/experience/cygnet.png',
-        url: 'https://www.cygnet-infotech.com/',
+        company: 'Cygnet.One',
+        logo: './img/experience/cygnet.jpg',
+        url: 'https://www.cygnet.one/',
         role: 'Full-Stack Software Developer',
         period: 'Jul 2018 – Sep 2023 | Ahmedabad, India',
         description:
